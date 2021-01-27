@@ -37,6 +37,7 @@ $router->group(['middleware' => 'auth'], function() use($router) {
     $router->post('fleets', 'FleetsController@store');
     $router->get('fleets/{id}', 'FleetsController@edit');
     $router->put('fleets/{id}', 'FleetsController@update');
+    $router->delete('fleets/{id}', 'FleetsController@destroy');
 
     $router->post('/logout', 'UserController@logout');
 });
